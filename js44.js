@@ -1,6 +1,4 @@
- function main() {
-  getbutton();
-  }
+
 
   function getNewUrl(){
     let url = new URL("https://deckofcardsapi.com/api/deck/new/draw/?count=0");
@@ -34,22 +32,13 @@
       document.getElementById("Dick_id").textContent=deck_id;
       document.getElementById("num_left").textContent=remaining;
       let output=""
+
       for(i in cards){
-      output+="<div>"+cards[i].value +" "+"of"+" "+ cards[i].suit + <img src="https://deckofcardsapi.com/static/img/8H.png" alt="ss" style="width:104px;height:142px;"> + "</div>";
-      console.log(cards[i])
-      console.log(cards[i].image)
+      output+="<div>"+cards[i].value +" "+"of"+" "+ cards[i].suit + "</br>" + "<img src=" + cards[i].image + ">" + "</div>";
+        document.getElementById("card_show").innerHTML=output;
+        console.log(cards[i])
+        console.log(cards[i].image)
     };
-    document.getElementById("card_show").innerHTML=output;
+    
     });
     }
-
-        
-        //Here is small function to crate images
-    		function show_image(src, width, height, alt) {
-          var img = document.createElement("img");
-          img.src = src;
-          img.width = width;
-          img.height = height;
-          img.alt = alt;
-          document.body.appendChild(img);
-   			 }
