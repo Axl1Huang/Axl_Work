@@ -1,5 +1,5 @@
- function main(){
-  getbutton()
+ function main() {
+  getbutton();
   }
 
   function getNewUrl(){
@@ -35,10 +35,21 @@
       document.getElementById("num_left").textContent=remaining;
       let output=""
       for(i in cards){
-      output+="<div>"+cards[i].value +" "+"of"+" "+ cards[i].suit +"</div>";
+      output+="<div>"+cards[i].value +" "+"of"+" "+ cards[i].suit + show_image(cards[i].image,100,100,"meow") + "</div>";
       console.log(cards[i])
       console.log(cards[i].image)
     };
     document.getElementById("card_show").innerHTML=output;
     });
     }
+
+        
+        //Here is small function to crate images
+    		function show_image(src, width, height, alt) {
+          var img = document.createElement("img");
+          img.src = src;
+          img.width = width;
+          img.height = height;
+          img.alt = alt;
+          document.body.appendChild(img);
+   			 }
