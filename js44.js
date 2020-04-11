@@ -35,7 +35,7 @@
       document.getElementById("num_left").textContent=remaining;
       let output=""
       for(i in cards){
-      output+="<div>"+cards[i].value +" "+"of"+" "+ cards[i].suit + show_image(cards[i].image,100,100,"meow") + "</div>";
+      output+="<div>"+cards[i].value +" "+"of"+" "+ cards[i].suit + <img src="https://deckofcardsapi.com/static/img/8H.png" alt="ss" style="width:104px;height:142px;"> + "</div>";
       console.log(cards[i])
       console.log(cards[i].image)
     };
